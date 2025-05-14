@@ -55,7 +55,7 @@
     <div id="ldsClose" style="position:absolute;top:5px;right:10px;cursor:pointer;color:red;font-weight:bold;">✖</div>
     <h3>Keyword Toolkit</h3>
     <button id="extractKW">📋 Extract KW - Lean Domain Search.com</button>
-    <button id="extractDomains">📋 Extract .com - Dynadot Bulk Search</button>
+    <button id="extractDomains">📋 Extract .com - for Dynadot Bulk Search</button>
 
     <h4>1. Paste Keyword from LDS</h4>
     <textarea id="keywordSource" placeholder="Paste keyword list from LDS..."></textarea>
