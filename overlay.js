@@ -86,8 +86,9 @@ function copyFilteredKeywords() {
   showToast('Matched keywords copied to clipboard');
 }
 
-(function createOverlay(){
-  if (document.getElementById('ldsOverlay')) return;
+function createOverlay() {
+  const old = document.getElementById('ldsOverlay');
+  if (old) old.remove();
 
   const box = document.createElement('div');
   box.id = 'ldsOverlay';
@@ -119,4 +120,6 @@ function copyFilteredKeywords() {
     fontFamily: "sans-serif"
   });
   document.body.appendChild(box);
-})();
+}
+
+createOverlay(); // 💥 Always show overlay when loaded
