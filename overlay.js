@@ -98,7 +98,7 @@
     const domains = elements.map(el => el.textContent.trim())
       .filter(text => text.length > 0 && !text.includes('.com') && !text.includes('.blog') && /^[A-Z][a-z]+[A-Z][a-z]+$/.test(text))
       .map(text => text.toLowerCase() + '.com');
-    const unique = [...new Set(domains)].slice(0, 900);
+    const unique = [...new Set(domains)].slice(0, 1000);
     navigator.clipboard.writeText(unique.join('\n'));
     showToast(`Copied ${unique.length} .com domains to clipboard`);
   }
@@ -112,7 +112,7 @@
         keywordMap.set(spaced.replace(/\s+/g, '') + '.com', spaced);
         return spaced;
       });
-    const unique = [...new Set(keywords)].slice(0, 900);
+    const unique = [...new Set(keywords)].slice(0, 1000);
     navigator.clipboard.writeText(unique.join('\n'));
     showToast(`Copied ${unique.length} keywords to clipboard`);
   }
